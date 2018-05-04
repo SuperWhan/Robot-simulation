@@ -1,0 +1,24 @@
+______________________________________________
+palyer_battery.h | player_battery.cc | changed
+______________________________________________
+Dist method added
+______________________________________________
+
+just like the refactor1, take out the Dist, since where we need the to seperate two different method, one is for depelete and one is for the distance calculation. that is unncessesary. it just seems as same as refactor 1, but refactor 1 is take out the temp varable, this is not as same as refactor3:
+
+****************************************************************************
+*									   *
+*double PlayerBattery::Dist(Position old_pos, Position new_pos) {	   *
+*								           *
+*  double dist = std::sqrt(						   *
+*      std::pow(old_pos.x() - new_pos.x(), 2.0) +  // int to double	   *
+*          std::pow(old_pos.y() - new_pos.y(), 2.0));  // int to double    *
+*									   *
+*  return dist;								   *
+*}									   *
+**************************************************************************** : line 28-35 arena.cc
+
+
+****************************************************************************
+*  double Dist(Position old_pos, Position new_pos);			   * : line 119 arena.h
+****************************************************************************

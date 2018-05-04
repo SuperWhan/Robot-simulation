@@ -1,0 +1,46 @@
+_______________________________
+arena.h | arena.cc | changed
+_______________________________
+
+double Distance()| method added
+_______________________________
+
+
+
+
+
+
+arena.h:
+	#1: line 179: declare the new globale function: Distance, with two paremeters, which is two objects.
+	*******************************************
+	*double Distance(Position p1, Position p2)*
+	*******************************************
+
+arena.cc:
+	#1: line 269: make the Distance in arena.h functional, which will calculate two objects' distance
+	*****************************************************************
+	*double Arena::Distance(Position p1, Position p2) {		*
+  	*double ent1_x = p1.x();					*
+  	*double ent1_y = p1.y();					*
+  	*double ent2_x = p2.x();					*
+  	*double ent2_y = p2.y();					*
+	*								*
+	*double dist = std::sqrt(					*
+    	*std::pow(ent2_x - ent1_x, 2) + std::pow(ent2_y - ent1_y, 2));	*
+	*								*
+  	*return dist;							*
+	*}								*
+	*****************************************************************
+	
+	
+	#2: line 290: put Distance() into use, and replace the original way to do this
+	*******************************************************************
+	*  if (Distance(ent1->get_pos(), ent2->get_pos()) >		  *
+      	*	ent1->radius() + ent2->radius() + collision_delta) {...}  *
+	*******************************************************************
+
+	#3: line 302, use here too, to get the heading angle, replace the dis(), since that is temp function.
+	************************************************************
+	*   double angle = std::asin(std::abs(ent2_x - ent1_x) /   *
+      	*	Distance(ent1->get_pos(), ent2->get_pos()));	   *
+	************************************************************

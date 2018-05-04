@@ -1,0 +1,57 @@
+player_motion_handler.h: delete *double speed(void)-getter* and *void speed()-setter* they are odd, line 65
+			: heading_angle -> setter&getter -> set_heading_angle & get_heading_angle: line 87 and line 94
+			: speed_delta -> setter&getter -> set_speed_delta & get_speed_delta:line 101 and line 108
+			: angle_delta -> setter&getter -> set_angle_delta & get_angle_delta:line 115 nad line 122
+player_motion_handler.cc: changed when setter and getter changed their name.
+			: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 68
+			: angle_delta -> setter&getter -> set_speed_delta: line66
+			: heading_angle -> setter&getter -> set_angle_delta: line67
+player_motion_behavior.cc: heading_angle -> setter&getter -> get_heading_angle: line 28, line30
+player.h: changed while speed setter and getter rename to set_speed & get_speed: line 136
+	: remove the speed(void) and speed()- unnecessary setter and getter: line 163 and line 173
+	: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 129, line120
+player.cc: changed while player.h changed speed setter and getter: line 37 and line 85
+	: speed_delta -> setter&getter -> set_speed_delta: line41
+	: angle_delta -> setter&getter -> set_agle_delta: line42
+	: heading_angle -> setter&getter -> set_heading_angle: line84
+
+
+robot.h: changed while speed setter and getter rename to set_speed & get_speed: line 136
+	: remove the speed(void) and speed()- unnecessary setter and getter: line 163 and line 173
+	: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 129, line120
+robot.cc: changed while player.h changed speed setter and getter: line 35 and line 70
+	: heading_angle -> setter&getter -> set_heading_angle: line33, line 69, line 51
+robot_motion_handler.h  : speed -> setter&getter -> set_speed & get_Speed: line 87 , 94
+			: heading_angle -> setter&getter -> set_heading_angle & get_heading_angle: line 101 and line 108
+			: speed_delta -> setter&getter -> set_speed_delta & get_speed_delta:line 116 and line 123
+			: angle_delta -> setter&getter -> set_angle_delta & get_angle_delta:line 130 nad line 137
+robot_motion_handler.cc: changed when setter and getter changed their name.
+			: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 72
+robot_motion_behavior.cc: heading_angle -> setter&getter -> get_heading_angle: line 29, line31
+
+
+home_base.h: changed while speed setter and getter rename to set_speed & get_speed: line 136
+	: remove the speed(void) and speed()- unnecessary setter and getter: line 163 and line 173
+	: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 129, line120
+home_base.cc: speed -> setter&getter -> set_speed : line 29, line 40
+	: heading_angle -> setter&getter -> set_heading_angle: line27, line 39, line 60
+
+
+superbot.h: changed while speed setter and getter rename to set_speed & get_speed: line 136
+	: remove the speed(void) and speed()- unnecessary setter and getter: line 163 and line 173
+	: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 129, line120
+superbot_base.cc: speed -> setter&getter -> set_speed : line 28, line 39
+	: heading_angle -> setter&getter -> set_heading_angle: line27, line 59
+
+
+
+arena_mobile_entity.h: heading_angle -> setter&getter -> get_heading_angle & set_heading_angle: line 59, line 66
+		     : speed -> setter&getter -> set_speed & get_Speed: line 73, line 80
+
+graphic_arena_viewer.cc: heading_angle -> setter& getter -> get_heading_angle: line155, line 165, line 237, line 355
+		       : raius -> setter&getter -> get_radius: line 241, line264, line 286, line310, line 332
+
+arena.cc: heading_angle -> setter& getter -> get_heading_angle: line248, line 253, line258, line 263
+	: radius ->  setter&getter -> get_Radius, all raidus() changed to get_radius()
+
+arena_entity.h -> raius -> setter&getter -> get_radius line 117

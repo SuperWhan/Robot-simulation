@@ -1,0 +1,35 @@
+Design Document:
+
+1. Arena:
+Need robot, player, homebase, obstacles, etc. arena is just like the place that everything will happen there. so that need put all members onto the arena. and need all "roles" apply into the arena(event).
+
+2. Arena Params:
+Robot, Player, Home base, recharge station, obstacles, Super bot.
+	-Robot: randomly move in the arena, you will play as player, and try to stop all robot, so when player collied with player, it should stop, and when robot hit the home base, it should change into superbot.
+	-Player: which you can control with up/down/left/right arrow.
+	-home base: randomly move in the arena like robot, when robot hit it, robot will change to superbot.
+	-recharge station: when player hit recharge station, it need recharge the battery.
+	-obstacles: just like obstacles. nothing special. unmovable.
+	-Super bot: when player hit the Superbot, player shold be frozen.
+
+3. Sensors: (to detect)
+Five Sensors will help robot to make 5 different action under different situation.
+	-sensor_touch: when robot is touch with other parames.
+	-contact_Sensor: when robot is collied with other parames. (very like sensor_touch).
+	-distress_call_Sensor: when some "friend" robots were frozen by player, this sensor will detect those frozen robot and will let movable robot heading to save frozen robot.
+	-entity_type_sensor: checking for the type of stuff detected by this sensor.
+	-Prximity_Sensor: this sensor will avoid the collision with other entities.
+
+4. Event: (make real action)
+Five sensors have five different event classes. those events will change the robots' action when each sensors were activated. For example: if distress_call_sensor get activated(means some frozen robot were detected by some movable robot), the distress_call_Sensor's event will change the heading angle of that moving robot.(chang it head to the frozen robot.)
+There's two extra events, one call keypress event. Player will make action when you press up/down/right/left arrow key. another one call recharge event. it wil recharge the player when the player collied with recharge station.
+So there are 7 event total.
+
+5.Graphic_arena:
+Draw out everythin in arena and arena itself.
+
+The idea is get clear all major stuff we need. get base class for them. try to make logic work with base class first, then implement all signal details. 
+
+We may need to draw more help data or information on the Menue(Such as he position of robot get by the sensors etc. so we should be more clear of what happening with some invisible sensors.)
+
+
