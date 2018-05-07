@@ -1,26 +1,9 @@
-### Incorporating the Update
+# Robot- simuation Project
 
-This update addresses 2 issues:
-- Controlling the timing of the update of the simulation so that it doesn't speed up when events occur
-- Addressing the problem of Robot::pos_ overriding that of ArenaEntity::pos_
-
-The fixes were, respectively:
-- Check for a minimum passing of time before advancing the simulation.
-- Removing pos_ from Robot and using setters and getters instead of direct access.
-
-There are a limited number of files with small changes that were modified relative to the initial release.
-If we were using git as intended, the branch would be created to work on the update, the updates would be made
-and tested, then the branch would be merged into the master. However, here you are copying the contents of
-the repo to another.
-
-There are 2 ways to go about incorporating. The first is to make a branch on your student repo that contains the 
-updates and then merge into your master. The second is to find the differences and make the changes yourself by hand.
-
-The files that contain changes are:
-- graphics_arena_viewer.h : UpdateSimulation
-- graphics_arena_viewer.cc : UpdateSimulation
-- arena.h : AdvanceTime
-- arena.cc : AdvanceTime
-- robot.h : removing _pos
-- robot.cc : TimeStepUpdate
-
+# Method:
+	Creat a robot simulation game, which contains all neccessary component for an APP, program part, gaming design, user interface, bug report, documentations ect. Using unittest to test different game methods, warning fix. 
+	For the programming part, and design goal is: Plaer and other similar entities live in the arena and are quite oblivious to being viewed by the viewer. The viewer is in control of everything in that it sends a message to the arena to update, meaning move the arena entities the appropriate amount given how much time has passed since the last update. It then gets the appropriate positional information from each entity and draws these to the screen. All the while, the system is listening for keyboard and mouse activity by the user. If any action occurs, the associated callback is executed.
+# Applied skills:
+	C/C++, UML, unittest, Makefile,documentation, github(bug report, error report, branches, commit messages), gdb, python, warning fix, team works, group representation.
+# Hardest Part:
+	The design is the most difficult part, especially the sensors design. Having a good algorithmns and having a nice idea is important, which will help us to avoid "detours". Like the super_bot part, when the robot hit the home base, it will change the color and become a super_bot, superbot will have different methods and different features with robot. The TA gave hits that creat a new header, which call superbot, it is different, but still having same moving method with robot, which would take longer and more complex steps, so we did not creat that header, we just implement super_bot's feature into robot header, and give it an private valuble call "is_super_bot", to determine this robot is superbot or not. This design idea reduced a lot of works. It is working perfect, and also has less memory been used while run the game. So I think design ideas are the hardest part.
