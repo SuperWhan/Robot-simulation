@@ -3,7 +3,7 @@
 ## Method:
 
 <p>Creat a robot simulation game, which contains all neccessary component for an APP, program part, gaming design, user interface, bug report, documentations ect. Using unittest to test different game methods, warning fix. </p>
-<p>For the programming part, and design goal is: Plaer and other similar entities live in the arena and are quite oblivious to being viewed by the viewer. The viewer is in control of everything in that it sends a message to the arena to update, meaning move the arena entities the appropriate amount given how much time has passed since the last update. It then gets the appropriate positional information from each entity and draws these to the screen. All the while, the system is listening for keyboard and mouse activity by the user. If any action occurs, the associated callback is executed.</p>
+<p>For the programming part, and design goal is: Player and other similar entities live in the arena and they are quite obviously to being viewed by the viewer. The viewer is in control of everything in that it sends a message to the arena to update, meaning move the arena entities the appropriate amount given how much time has passed since the last update. It then gets the appropriate positional information from each entity and draws these to the screen. All the while, the system is listening for keyboard and mouse activity by the user. If any action occurs, the associated callback is executed.</p>
 
 ## Applied skills:
 
